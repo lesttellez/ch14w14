@@ -1,22 +1,18 @@
-const { Comment } = require('../models');
+const { Sequelize, Model, DataTypes } = require('sequelize');
+const sequelize = require('../config/connection');
 
-const commentData = [{
-        comment_text: "Lorem ipsum dolor sit amet",
-        user_id: 1,
-        post_id: 1
-    },
-    {
-        comment_text: "consectetur adipiscing elit",
-        user_id: 2,
-        post_id: 2
-    },
-    {
-        comment_text: "sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
-        user_id: 3,
-        post_id: 3
+class Comment extends Model {}
+
+Comment.init(
+  {
+    body: {
+      type: DataTypes.STRING,
+      allowNull: false
     }
-];
+  },
+  {
+    sequelize
+  }
+);
 
-const seedComments = () => Comment.bulkCreate(commentData);
-
-module.exports = seedComments;
+module.exports = Comment;

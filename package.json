@@ -5,16 +5,14 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js",
-    "watch": "nodemon server.js",
-    "seed": "node seeds/index.js"
+    "seeds": "node seeds/seeds.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/lestetellez/ch14w14.git"
   },
   "author": "",
-  "license": "MIT",
+  "license": "ISC",
   "bugs": {
     "url": "https://github.com/lestetellez/ch14w14/issues"
   },
@@ -26,11 +24,9 @@
     "express": "^4.18.1",
     "express-handlebars": "^6.0.6",
     "express-session": "^1.17.3",
+    "express.js": "^1.0.0",
+    "mysql": "^2.18.1",
     "mysql2": "^2.3.3",
     "sequelize": "^6.21.4"
-  },
-  "devDependencies": {
-    "jest": "^26.4.2",
-    "nodemon": "^2.0.4"
   }
 }
