@@ -1,8 +1,6 @@
-const User = require('./user-index');
-const Post = require('./post-index');
-const Comment = require('./comment-index');
-const { Model, DataTypes } = require('sequelize');
-const sequelize = require('../config/connection.js');
+const User = require('./User');
+const Post = require('./Post');
+const Comment = require('./Comment');
 
 Post.belongsTo(User, {
   foreignKey: 'userId',
